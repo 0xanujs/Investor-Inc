@@ -1,0 +1,170 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    background-color: #f0f8ff;
+}
+
+#menu {
+    background: url('images/mainmenu.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#game {
+    display: none;
+    background: url('images/bg-image.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    margin: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.popup, .modal, .panel, .comic-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.popup-content, .modal-content {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#status, #bankStatus {
+    background-color: rgba(200, 200, 200, 0.5);
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+#inputArea {
+    background-color: rgba(220, 220, 220, 0.8);
+    padding: 15px;
+    margin-top: auto;
+    text-align: left;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.comic-panel {
+    padding: 15px;
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.risk-icon {
+    color: red;
+    font-size: 1.2em;
+}
+
+#game {
+    display: flex;
+}
+
+#ownedStocks {
+    width: 200px;
+    padding: 15px;
+    background-color: rgba(200, 200, 200, 0.5);
+    margin-left: 10px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+#stocksList div {
+    margin-bottom: 8px;
+}
+
+#buttonArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#leftButtons, #rightButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    width: 600px;
+    height: 400px;
+}
+
+#buySellPanel {
+    background-image: url('images/buy-sell.jpeg');
+}
+
+#finAdvicePanel {
+    background-image: url('images/finadvisor.jpeg');
+}
+
+#insiderPanel {
+    background-image: url('images/insider.png');
+}
+
+#buySellContent, #finAdviceContent, #insiderContent {
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+}
+
+#buySellContent p, #finAdviceContent p, #insiderContent p,
+#buySellContent h2, #finAdviceContent h2, #insiderContent h2,
+#buySellContent label, #finAdviceContent label, #insiderContent label {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+}

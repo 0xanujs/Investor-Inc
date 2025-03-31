@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Inc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Investor Inc</h1>
+        <button onclick="startGame()">New Game</button>
+        <button onclick="loadGame()">Load Game</button>
+        <input type="file" id="loadFile" class="hidden" onchange="handleFileLoad(event)">
+    </div>
+
+    <div id="comic" class="comic-container hidden">
+        <div class="comic-panel" id="panel1">
+            <p>Roy gets out of jail, walking down the street...</p>
+        </div>
+        <div class="comic-panel hidden" id="panel2">
+            <p>He sees a luxury watch in a store window...</p>
+        </div>
+        <div class="comic-panel hidden" id="panel3">
+            <p>A man whispers, "Shiny, ain't it?"</p>
+        </div>
+        <div class="comic-panel hidden" id="panel4">
+            <p>"I'm an agent. Here's your chance. +$500. I will come every week for $120."</p>
+        </div>
+        <button id="nextPanelButton" onclick="showNextPanel()">Next</button>
+    </div>
+
+    <div id="game">
+        <div class="container">
+            <h1>Investor Inc</h1>
+            <p id="status">Day: 1 | Money: $500</p>
+            <p id="bankStatus">Bank: $0 | Goal: $10000</p>
+            <div id="buttonArea">
+                <div id="leftButtons">
+                    <button onclick="openBuyPopup()">Buy Stocks</button>
+                    <button onclick="openSellPopup()">Sell Stocks</button>
+                </div>
+                <div id="rightButtons">
+                    <button onclick="getFinancialAdvice()">Get Financial Advice ($100)</button>
+                    <button onclick="doInsiderTrading()">Insider Trading ($200) <span class="risk-icon">⚠</span></button>
+                </div>
+            </div>
+            <button onclick="endDay()">End Day</button>
+            <button onclick="toggleOptions()">Options</button>
+            <button onclick="showDepositPrompt()">Deposit Money</button>
+            <button onclick="showWithdrawPrompt()">Withdraw Money</button>
+            <div id="optionsMenu" class="hidden">
+                <button onclick="saveGame()">Save Game</button>
+                <button onclick="loadGame()">Load Game</button>
+                <button onclick="resetGame()">Reset Game</button>
+            </div>
+        </div>
+        <div id="ownedStocks">
+            <h2>Owned Stocks</h2>
+            <div id="stocksList"></div>
+        </div>
+        <div id="inputArea"></div>
+        <div id="buySellPanel" class="panel hidden">
+            <div id="buySellContent"></div>
+            <button onclick="closeBuySellPanel()">Close</button>
+        </div>
+        <div id="finAdvicePanel" class="panel hidden">
+            <div id="finAdviceContent"></div>
+            <button onclick="closeFinAdvicePanel()">Close</button>
+        </div>
+        <div id="insiderPanel" class="panel hidden">
+            <div id="insiderContent"></div>
+            <button onclick="closeInsiderPanel()">Close</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
